@@ -1,0 +1,51 @@
+/* ── Hero Slider ── */
+.hero-slider{position:relative;width:100%;min-height:480px;overflow:hidden;background:#003d1f}
+.hero-slide{position:absolute;inset:0;display:flex;align-items:center;opacity:0;transition:opacity .6s ease;pointer-events:none}
+.hero-slide.active{opacity:1;pointer-events:auto}
+.hero-slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.45)}
+.hero-slide-content{position:relative;z-index:2;padding:60px 0;max-width:600px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);padding:6px 16px;border-radius:var(--radius-full);font-size:.78rem;font-weight:600;color:#a7f3d0;margin-bottom:18px}
+.hero-badge-dot{width:8px;height:8px;background:#34d399;border-radius:50%;animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
+.hero-title{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:16px}
+.hero-title em{color:var(--secondary);font-style:normal}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.78);margin-bottom:32px;line-height:1.7;max-width:480px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-cta-outline{padding:12px 28px;border:1.5px solid rgba(255,255,255,.5);color:#fff;border-radius:var(--radius-full);font-weight:600;font-size:.9rem;transition:var(--transition-fast)}
+.hero-cta-outline:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.hero-stats{display:flex;gap:32px;margin-top:40px}
+.hero-stat-num{font-size:1.5rem;font-weight:800;color:#fff;font-family:var(--font-main)}
+.hero-stat-label{font-size:.75rem;color:rgba(255,255,255,.6)}
+
+.slider-dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:5}
+.slider-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:var(--transition-fast)}
+.slider-dot.active{background:#fff;width:24px;border-radius:var(--radius-full)}
+.slider-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:5;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;cursor:pointer;transition:var(--transition-fast)}
+.slider-arrow:hover{background:rgba(255,255,255,.3)}
+.slider-arrow-left{left:20px}
+.slider-arrow-right{right:20px}
+
+/* ── Offer Banner ── */
+.offer-banner-section{padding:0 0 64px}
+.offer-banner{background:linear-gradient(135deg,#003d1f,#005c2e);border-radius:var(--radius-lg);padding:48px 52px;display:flex;align-items:center;justify-content:space-between;gap:32px;overflow:hidden;position:relative}
+.offer-banner::before{content:'';position:absolute;top:-60px;right:-60px;width:240px;height:240px;background:radial-gradient(circle,rgba(245,158,11,.2),transparent 70%);pointer-events:none}
+.offer-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--secondary);margin-bottom:10px}
+.offer-title{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:12px}
+.offer-title span{color:var(--secondary)}
+.offer-sub{font-size:.9rem;color:rgba(255,255,255,.72);margin-bottom:24px}
+.offer-timer{display:flex;gap:10px;margin-bottom:28px}
+.timer-block{background:rgba(255,255,255,.1);border-radius:var(--radius-md);padding:10px 14px;text-align:center;min-width:56px}
+.timer-num{font-size:1.4rem;font-weight:800;color:#fff;line-height:1;font-family:var(--font-main)}
+.timer-label{font-size:.6rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.55);margin-top:3px}
+.offer-right{flex-shrink:0;text-align:center;position:relative;z-index:1}
+.offer-emoji{font-size:6rem;filter:drop-shadow(0 8px 16px rgba(0,0,0,.3))}
+.offer-tag{background:var(--secondary);color:#fff;font-size:1rem;font-weight:800;padding:8px 22px;border-radius:var(--radius-full);margin-top:14px;display:inline-block}
+
+@media(max-width:768px){
+  .offer-banner{flex-direction:column;padding:32px 24px;text-align:center}
+  .offer-timer{justify-content:center}
+  .hero-stats{gap:20px}
+}
+@media(max-width:480px){
+  .hero-title{font-size:1.7rem}
+}

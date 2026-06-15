@@ -1,0 +1,20 @@
+.profile-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:40px;margin-top:28px;align-items:start}
+.profile-tabs-sidebar{background:var(--bg-tertiary);border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:20px 0;box-shadow:var(--shadow-sm);position:sticky;top:88px;overflow:hidden}
+.profile-sidebar-header{padding:20px 24px;border-bottom:1px solid var(--border-light);margin-bottom:8px}
+.profile-avatar-big{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#34d399);color:#fff;font-size:1.6rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.profile-sidebar-name{font-weight:700;font-size:1rem;margin-bottom:2px}
+.profile-sidebar-email{font-size:.8rem;color:var(--text-secondary)}
+.profile-tab-btn{display:flex;align-items:center;gap:12px;padding:13px 24px;font-weight:600;color:var(--text-secondary);transition:var(--transition-fast);text-align:left;width:100%;font-size:.9rem}
+.profile-tab-btn:hover{color:var(--text-primary);background:var(--bg-secondary)}
+.profile-tab-btn.active{color:var(--primary);border-left:4px solid var(--primary);background:var(--primary-light);padding-left:20px}
+
+.profile-content-panel{background:var(--bg-tertiary);border:1px solid var(--border-light);padding:36px;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+.profile-panel-title{font-size:1.3rem;font-weight:700;margin-bottom:24px;border-bottom:1px solid var(--border-light);padding-bottom:12px}
+.address-manager-card{border:1px solid var(--border-color);border-radius:var(--radius-md);padding:18px;margin-bottom:14px;position:relative;display:flex;justify-content:space-between;align-items:flex-start;transition:var(--transition-fast)}
+.address-manager-card:hover{border-color:var(--primary)}
+.address-default-tag{font-size:.7rem;font-weight:700;background:var(--primary-light);color:var(--primary);padding:2px 8px;border-radius:var(--radius-full)}
+
+@media(max-width:768px){
+  .profile-grid{grid-template-columns:1fr;gap:24px}
+  .profile-tabs-sidebar{position:static}
+}
