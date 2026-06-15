@@ -41,11 +41,6 @@ npm install
 npm run dev     # Start Vite dev server on :5173
 ```
 
-## Demo Credentials (after seeding)
-| Role  | Email              | Password          |
-|-------|--------------------|-------------------|
-| Admin | admin@gmail.com    | adminpassword123  |
-| User  | priya@gmail.com    | password123       |
 
 ## Coupon Codes
 - `GRAND10` — 10% off orders above ₹1,000
